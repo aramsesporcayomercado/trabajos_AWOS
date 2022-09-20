@@ -15,6 +15,18 @@ public class RPCUsuario {
         config.setServerURL(new URL("http://localhost:1200"));
         XmlRpcClient client = new XmlRpcClient();
         client.setConfig(config);
+           System.out.println("calcular imc");
+         System.out.println("Ingresa tu peso porfavor");
+        double peso = sc.nextDouble();
+        System.out.println("Ingresa tu altura porfavor");
+        double altura = sc.nextDouble();
+        Object[] number ={peso, altura};
+          Double response = (Double)
+                client.execute("methods.operation", numbers);
+          System.out.println(response);
+        
+         System.out.println("activad 2");
+        
         Object[] numbers = {5.0, 5D,4,10};
         System.out.println("Ingresa numero 1 porfavor");
         double num1 = sc.nextDouble();
