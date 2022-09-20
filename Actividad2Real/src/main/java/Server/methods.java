@@ -2,6 +2,11 @@ package Server;
 
 public class methods {
 
+    public String imc(double peso, double altura){
+    double calcular_imc=(peso/(altura*altura));
+    return "tu imc es de"+calcular_imc;
+    }
+    
     public String operation(double num1, double num2, double num3, double num4) {
         double sum = (num1 + num2 + num3 + num4);
         double product = (num1 * num2 * num3 * num4);
