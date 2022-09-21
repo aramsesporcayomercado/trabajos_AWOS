@@ -34,31 +34,24 @@ public class Client {
                 switch (Integer.parseInt(opcion)) {
                     case 1:
                         do {
-                            System.out.print("el primer valor");
+                            System.out.print("el primer numero porfavor ");
                             num1 = sc.next();
-                            if (!isNumber(num1)) {
-                                System.out.print("error ingrese el correcto");
-                                break;
-                            }
+                            System.out.print("el segundo numero porfavor ");
+                               num2 = sc.next();
                         }
                         while (!isNumber(num2));
                         //llamada al servicio web
                         Object[] info ={ num1, num2};
                         String response = (String) client.execute("Methods.sum", info);
                         response = (String) client.execute("Methods.sum", info);
-                        response = (String) client.execute("Methods.sum", info);
                         System.out.println(response);
                         break;
                     case 2:
                         do {
-                            System.out.print("el primer dato");
-                            System.out.print("el segundo dato");
+                            System.out.print("el primer numero porfavor");
+                            System.out.print("el segundo numero porfavor ");
                             num1 = sc.next();
                             num2 = sc.next();
-                            if (!isNumber(num1)){
-                                System.out.print("error ingrese el correcto");
-                                break;
-                            }
                         }
                         while (!isNumber(num2));
                         //llamada al servicio web
@@ -68,14 +61,10 @@ public class Client {
                         break;
                     case 3:
                         do{
-                            System.out.print("el primer dato");
-                            System.out.print("el segundo dato");
+                            System.out.print("el primer numero porfavor");
+                            System.out.print("el segundo numero porfavor");
                             num1 = sc.next();
                             num2 = sc.next();
-                            if(!isNumber(num1)){
-                                System.out.print("error ingrese el correcto porfavor");
-                                break;
-                            }
                         }
                         while (!isNumber(num2));
                         Object[] i ={ num1, num2};
@@ -84,14 +73,10 @@ public class Client {
                         break;
                     case 4:
                         do {
-                            System.out.print("el primer dato");
-                            System.out.print("el segundo dato");
+                            System.out.print("el primer numero porfavor");
                             num1 = sc.next();
+                            System.out.print("el segundo numero porfavor");
                             num2 = sc.next();
-                            if (!isNumber(num1)) {
-                                System.out.print("error ingrese el correcto porfavor");
-                                break;
-                            }
                         }
                         while (!isNumber(num2));
                         Object[] a ={ num1, num2};
@@ -100,51 +85,54 @@ public class Client {
                         break;
                     case 5:
                         do {
-                            System.out.print("el primer dato");
+                            System.out.print("el primer numero porfavor");
                             num1 = sc.next();
-                            if (!isNumber(num1)) {
-                                System.out.print("error ingrese el correcto porfavor");
-                                break;
-                            }
-                        }
-                        while (!isNumber(num2));
-                        Object[] t ={ num1, num2};
-                        response = (String) client.execute("Methods.division", t);
-                        System.out.println(response);
-                        break;
-                    case 6:
-                        do {
-                            System.out.print("el primer dato");
-                            num1 = sc.next();
-                            if (!isNumber(num1)){
-                                System.out.print("error ingrese el correcto porfavor");
-                                break;
-                            }
                         }
                         while (!isNumber(num2));
                         Object[] u ={ num1, num2};
                         response = (String) client.execute("Methods.exponente", u);
                         System.out.println(response);
                         break;
-                    case 7:
+                    case 6:
                         do {
-                            System.out.print("el primer dato");
+                            System.out.print("el primer numero porfavor");
                             num1 = sc.next();
-                            if (!isNumber(num1)){
-                                System.out.print("error ingrese el correcto porfavor");
-                                break;
-                            }
                         }
                         while (!isNumber(num2));
                         Object[] y ={ num1, num2};
                         response = (String) client.execute("Methods.raiz", y);
                         System.out.println(response);
                         break;
+                    case 7:
+                        do{
+                          System.out.print("Salir");
+                            num1 = sc.next();  
+                        }
+                         Object[] w ={ num1, num2};
+                        response = (String) client.execute("Methods.salir", w);
+                        System.out.println(response);
                     default:
-                        System.out.print("ingresa la opcion correcta porfavor");
+                       
+                      System.out.print("historial"+"methods.sum");
+                      System.out.println(response);
+                        
+                      System.out.print("historial"+"methods.resta");
+                      System.out.println(response);
+                        
+                      System.out.print("historial"+"methods.multiplicacion");
+                      System.out.println(response);
+                        
+                      System.out.print("historial"+"methods.division");
+                      System.out.println(response);
+                        
+                      System.out.print("historial"+"methods.exponente");
+                      System.out.println(response);
+                     
+                      System.out.print("historial"+"methods.raiz");
+                      System.out.println(response);
                 }
             } else {
-                System.out.print("ingresa opcion valido");
+                System.out.print("ingresa opcion correcta porfavor");
 
             }
         } while (!opcion.equals("7"));
